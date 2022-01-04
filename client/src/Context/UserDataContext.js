@@ -12,7 +12,6 @@ const UserDataContextProvider = (props) => {
 
   const [posts, setPosts] = useState([]);
   const [editBlogId, setEditBlogID] = useState(null);
-  
 
   const url = "http://localhost:3001";
   //Get Data From Databse
@@ -26,17 +25,13 @@ const UserDataContextProvider = (props) => {
   }, []);
 
   useEffect(() => {
-    async function fetchPosts() {
-   await axios
+    axios
       .get(url)
       .then((res) => {
         setPosts(res.data);
       })
       .catch((err) => console.log(err));
-    }
-
-    fetchPosts()
-  }, [])
+  }, []);
 
   //Send Data To The Database
   const handlePublish = (eve) => {
@@ -78,9 +73,6 @@ const UserDataContextProvider = (props) => {
       .catch((err) => console.log(err));
     window.location = window.location.origin;
   };
-
-
-
 
   return (
     <div>

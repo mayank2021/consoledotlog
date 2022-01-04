@@ -1,36 +1,37 @@
-.blogList--container{
-    display: flex;
-   justify-content: flex-start ;
-   align-items: flex-start ;
-   flex-wrap: wrap;
+.blogList--container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.description-para{
-    font-size: 18px;
+.description-para {
+  font-size: 18px;
 }
 
-.no-blogs{
-    margin:80px auto;
+.no-blogs {
+  margin: 80px auto;
 }
 
-.no-blogs h4{
-    text-align: center;
-    line-height: 30px;
+.no-blogs h4 {
+  text-align: center;
+  line-height: 30px;
 }
 
-@media only screen and (max-width: 900px){
- .blogList--container{
+@media only screen and (max-width: 900px) {
+  .blogList--container {
     justify-content: center;
     align-items: center;
- }
- h1,p,h3{
-     text-align: center;
- }
+  }
+  h1,
+  p,
+  h3 {
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width: 400px){
-    .no-blogs{
-        margin:60px auto;
-    }
-   }
-   
+@media only screen and (max-width: 400px) {
+  .no-blogs {
+    margin: 60px auto;
+  }
+}

@@ -6,7 +6,7 @@ import UserDataContextProvider from "./Context/UserDataContext";
 
 ReactDOM.render(
   <UserDataContextProvider>
-    <BrowserRouter basename="/React">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </UserDataContextProvider>,

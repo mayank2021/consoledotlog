@@ -1,17 +1,18 @@
-import React, {useContext,useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Update";
 import { UserDataContext } from "../../Context/UserDataContext";
 
 export const Update = () => {
-  const { editBlogId,setUserEditPost, userEditPost, posts, handleUpdate } = useContext(UserDataContext);
+  const { editBlogId, setUserEditPost, userEditPost, posts, handleUpdate } =
+    useContext(UserDataContext);
 
   useEffect(() => {
-    posts.map(ele => {
-        if(editBlogId === ele._id){
-          setUserEditPost(ele)
-        }
-    })
-  }, [])
+    posts.map((ele) => {
+      if (editBlogId === ele._id) {
+        setUserEditPost(ele);
+      }
+    });
+  }, []);
 
   return (
     <div className="container utility_height">
@@ -27,8 +28,9 @@ export const Update = () => {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             value={userEditPost.postTitle}
-            onChange={(ele) => setUserEditPost({ ...userEditPost, postTitle:ele.target.value})}
-
+            onChange={(ele) =>
+              setUserEditPost({ ...userEditPost, postTitle: ele.target.value })
+            }
             required
           />
         </div>
@@ -43,7 +45,9 @@ export const Update = () => {
             id="exampleInputPassword1"
             rows="5"
             cols="30"
-            onChange={(ele) => setUserEditPost({ ...userEditPost, postBody:ele.target.value})}
+            onChange={(ele) =>
+              setUserEditPost({ ...userEditPost, postBody: ele.target.value })
+            }
             value={userEditPost.postBody}
             required
           />

@@ -1,5 +1,4 @@
 import React, {useContext ,useEffect, useState } from "react";
-import "./BlogDetail.css";
 import { useParams } from "react-router-dom";
 import { UserDataContext } from "../../Context/UserDataContext";
 
